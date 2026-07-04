@@ -22,7 +22,7 @@ const Packages = () => {
       icon: <Building2 className="w-8 h-8" />,
       title: "Full Growth Pack",
       price: "Custom",
-      features: ["SaaS / Mobile App Build", "Custom AI Agents (24/7)", "Enterprise SEO Strategy", "Full Automation Setup", "Priority 24/7 Support"],
+      features: ["Custom Software / Mobile App Build", "Custom AI Agents (24/7)", "Enterprise SEO Strategy", "Full Automation Setup", "Priority 24/7 Support"],
       isPopular: false
     }
   ];
@@ -33,7 +33,7 @@ const Packages = () => {
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-heading font-bold text-black mb-4"
+            className="text-4xl md:text-5xl font-heading font-bold text-vedam-charcoal mb-4"
           >
             Our Packages
           </motion.h2>
@@ -45,24 +45,24 @@ const Packages = () => {
               key={index}
               initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className={`relative bg-white rounded-3xl p-8 border ${pkg.isPopular ? 'border-vedam-blue shadow-2xl shadow-vedam-blue/10 scale-105 z-10 py-12' : 'border-gray-100 shadow-lg'}`}
+              className={`relative bg-white rounded-3xl p-8 border ${pkg.isPopular ? 'border-vedam-gold shadow-2xl shadow-vedam-gold/10 scale-105 z-10 py-12' : 'border-gray-100 shadow-lg'}`}
             >
               {pkg.isPopular && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-vedam-blue text-white px-4 py-1 rounded-full text-sm font-bold shadow-md tracking-wider uppercase">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-vedam-charcoal text-white px-4 py-1 rounded-full text-sm font-bold shadow-md tracking-wider uppercase">
                   Most Popular
                 </div>
               )}
               
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${pkg.isPopular ? 'bg-vedam-blue text-white' : 'bg-gray-50 text-vedam-blue'}`}>
+              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${pkg.isPopular ? 'bg-vedam-charcoal text-white' : 'bg-vedam-cream text-vedam-gold'}`}>
                 {pkg.icon}
               </div>
               
-              <h3 className="text-2xl font-heading font-bold text-black mb-2">{pkg.title}</h3>
+              <h3 className="text-2xl font-heading font-bold text-vedam-charcoal mb-2">{pkg.title}</h3>
               
               <ul className="space-y-4 mb-8 mt-8">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className={`w-5 h-5 shrink-0 ${pkg.isPopular ? 'text-vedam-blue' : 'text-gray-400'}`} />
+                    <CheckCircle2 className={`w-5 h-5 shrink-0 ${pkg.isPopular ? 'text-vedam-gold' : 'text-gray-400'}`} />
                     <span className="text-gray-600 font-medium">{feature}</span>
                   </li>
                 ))}
@@ -74,7 +74,7 @@ const Packages = () => {
                   const text = `Hi Vedam Digitech! I am interested in the *${pkg.title}*. Can we discuss the details?`;
                   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
                 }}
-                className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${pkg.isPopular ? 'bg-vedam-blue text-white hover:bg-blue-700 shadow-md hover:shadow-xl' : 'bg-gray-50 text-black hover:bg-gray-200'}`}
+                className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${pkg.isPopular ? 'bg-vedam-charcoal text-white hover:bg-black shadow-md hover:shadow-xl' : 'bg-vedam-cream text-vedam-charcoal hover:bg-gray-200'}`}
               >
                 Get Started
               </button>

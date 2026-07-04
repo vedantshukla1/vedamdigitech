@@ -12,12 +12,12 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="py-24 bg-gray-50 relative border-t border-gray-100">
+    <section id="process" className="py-24 bg-vedam-cream relative border-t border-gray-100">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-heading font-bold mb-4 text-black"
+            className="text-4xl md:text-5xl font-heading font-bold mb-4 text-vedam-charcoal"
           >
             How We Work
           </motion.h2>
@@ -34,11 +34,11 @@ const Process = () => {
                 transition={{ delay: index * 0.15 }}
                 className="flex flex-col items-center text-center group"
               >
-                <div className="w-20 h-20 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center text-vedam-blue mb-6 group-hover:border-vedam-blue group-hover:shadow-lg group-hover:shadow-vedam-blue/20 group-hover:scale-110 transition-all duration-300">
+                <div className="w-20 h-20 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center text-vedam-gold mb-6 group-hover:border-vedam-gold group-hover:shadow-lg group-hover:shadow-vedam-gold/20 group-hover:scale-110 transition-all duration-300">
                   {React.cloneElement(step.icon, { className: 'w-8 h-8' })}
                 </div>
                 <h4 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">{step.desc}</h4>
-                <h3 className="text-xl font-bold font-heading text-black">{step.title}</h3>
+                <h3 className="text-xl font-bold font-heading text-vedam-charcoal">{step.title}</h3>
               </motion.div>
             ))}
           </div>

@@ -8,16 +8,13 @@ const Services = () => {
 
   const services = [
     { icon: <Monitor />, title: "Web Development", description: "Custom fast websites built to convert" },
-    { icon: <Smartphone />, title: "App Development", description: "iOS & Android apps users love" },
-    { icon: <Cloud />, title: "SaaS Development", description: "Scalable software products for growth" },
-    { icon: <Search />, title: "SEO", description: "Rank higher, get found, grow organically" },
-    { icon: <MapPin />, title: "Google Maps SEO", description: "Dominate local search results" },
+    { icon: <Cloud />, title: "Custom Software", description: "Scalable software solutions for growth" },
     { icon: <Bot />, title: "AI Automation", description: "Automate tasks, save time and money" },
     { icon: <Cpu />, title: "AI Workflows & Agents", description: "Intelligent agents working 24/7" }
   ];
 
   return (
-    <section id="services" className="py-24 bg-gray-50 relative">
+    <section id="services" className="py-24 bg-white relative border-t border-vedam-cream">
       <div className="container mx-auto px-6 lg:px-16" ref={ref}>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
@@ -28,18 +25,18 @@ const Services = () => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-transparent hover:border-vedam-blue hover:shadow-vedam-blue/10"
+              className="bg-vedam-cream p-10 rounded-2xl border border-vedam-gold/20 hover:border-vedam-gold transition-colors duration-500 group flex flex-col items-start shadow-sm hover:shadow-lg"
             >
-              <div className="w-16 h-16 rounded-xl bg-vedam-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-vedam-blue">
-                {React.cloneElement(service.icon, { className: 'w-8 h-8' })}
+              <div className="mb-6 text-vedam-charcoal group-hover:text-vedam-gold transition-colors duration-500">
+                {React.cloneElement(service.icon, { className: 'w-8 h-8 stroke-[1.2]' })}
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-4 text-black">{service.title}</h3>
+              <h3 className="text-xl font-heading mb-3 text-vedam-charcoal">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}

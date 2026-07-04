@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Heart, HeartHandshake, ShieldCheck, Users, Target, Activity, FileText, Monitor, Server, Repeat, Send, Maximize2, Minimize2, Lock, Droplets, Sun, BookOpen, Info } from 'lucide-react';
 
 const NgoDemoPage = ({ onBack }) => {
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const [amount, setAmount] = useState(50);
   const [donated, setDonated] = useState(false);
   const [raised, setRaised] = useState(42500);
@@ -19,15 +19,15 @@ const NgoDemoPage = ({ onBack }) => {
   const progress = Math.min(100, (raised / goal) * 100);
 
   return (
-    <div className="min-h-screen bg-white relative pb-24 font-sans text-gray-900">
+    <div className="min-h-screen bg-white relative pb-24 font-sans text-vedam-charcoal">
       <header className="bg-white px-6 py-4 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-3"><Heart className="w-8 h-8 text-rose-500" /><h2 className="text-xl md:text-2xl font-bold font-heading text-black">NGO Platform</h2></div>
+        <div className="flex items-center gap-3"><Heart className="w-8 h-8 text-rose-500" /><h2 className="text-xl md:text-2xl font-bold font-heading text-vedam-charcoal">NGO Platform</h2></div>
         <button onClick={onBack} className="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl text-sm font-bold flex items-center gap-2 transition-colors"><ArrowLeft className="w-4 h-4" /> Back to Site</button>
       </header>
 
       {/* Demo Notice Banner */}
-      <div className="bg-blue-50 border-b border-blue-100 px-6 py-3 text-center z-40 relative">
-        <p className="text-blue-800 font-bold text-sm sm:text-base flex items-center justify-center gap-2">
+      <div className="bg-vedam-cream border-b border-vedam-gold/20 px-6 py-3 text-center z-40 relative">
+        <p className="text-vedam-charcoal font-bold text-sm sm:text-base flex items-center justify-center gap-2">
           <Info className="w-5 h-5 shrink-0" /> 
           <span><strong>Note:</strong> This is just a demonstration. Your actual platform will be 100% custom-built according to your specific business needs.</span>
         </p>
@@ -35,12 +35,12 @@ const NgoDemoPage = ({ onBack }) => {
 
       {/* Hero */}
       <section className="pt-20 pb-12 px-6 lg:px-16 text-center max-w-5xl mx-auto">
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-black mb-6">Digital Fundraising Suite</motion.h1>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-vedam-charcoal mb-6">Digital Fundraising Suite</motion.h1>
         <p className="text-xl text-gray-600">A highly optimized donation flow for supporters, backed by a CRM dashboard for non-profit organizations.</p>
       </section>
 
       {/* Section 1: Customer Frontend Simulator */}
-      <section className="py-16 px-6 lg:px-16 bg-gray-50 border-y border-gray-200 relative">
+      <section className="py-16 px-6 lg:px-16 bg-vedam-cream border-y border-gray-200 relative">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose-100 text-rose-600 rounded-full font-bold text-sm mb-6"><Monitor className="w-4 h-4"/> Live Website Simulator</div>
           <h2 className="text-4xl font-heading font-bold mb-4">Emotional Fundraising Pages</h2>
@@ -75,7 +75,7 @@ const NgoDemoPage = ({ onBack }) => {
             {/* Simulated Hero */}
             <div className="relative h-[500px] flex items-center justify-center">
               <img alt="Vedam Digitech" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="absolute inset-0 bg-vedam-charcoal/50"></div>
               <div className="relative z-10 text-center text-white px-8 max-w-4xl">
                 <h1 className="text-5xl md:text-7xl font-bold font-serif mb-6 leading-tight">Bring clean water to those who need it most.</h1>
                 <p className="text-xl md:text-2xl opacity-90 font-medium">Every drop counts. Your contribution can change a village forever.</p>
@@ -87,7 +87,7 @@ const NgoDemoPage = ({ onBack }) => {
               <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div className="flex flex-col items-center p-6"><Droplets className="w-12 h-12 text-rose-500 mb-4"/><h4 className="font-bold text-xl mb-2">Clean Water</h4><p className="text-gray-500">Building sustainable wells in remote communities.</p></div>
                 <div className="flex flex-col items-center p-6"><Sun className="w-12 h-12 text-amber-500 mb-4"/><h4 className="font-bold text-xl mb-2">Solar Energy</h4><p className="text-gray-500">Providing renewable light sources for schools.</p></div>
-                <div className="flex flex-col items-center p-6"><BookOpen className="w-12 h-12 text-blue-500 mb-4"/><h4 className="font-bold text-xl mb-2">Education</h4><p className="text-gray-500">Supplying books and materials to local teachers.</p></div>
+                <div className="flex flex-col items-center p-6"><BookOpen className="w-12 h-12 text-yellow-500 mb-4"/><h4 className="font-bold text-xl mb-2">Education</h4><p className="text-gray-500">Supplying books and materials to local teachers.</p></div>
               </div>
             </div>
 
@@ -115,10 +115,10 @@ const NgoDemoPage = ({ onBack }) => {
                   <AnimatePresence mode="wait">
                     {!donated ? (
                       <motion.div key="form" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0, x:50}} className="flex flex-col h-full justify-center">
-                        <h4 className="font-bold text-2xl mb-6 text-gray-900">Make a Donation</h4>
+                        <h4 className="font-bold text-2xl mb-6 text-vedam-charcoal">Make a Donation</h4>
                         <div className="flex gap-2 mb-8 bg-gray-100 p-1 rounded-xl w-fit">
-                          <button className="px-6 py-2 bg-white shadow font-bold rounded-lg text-sm text-gray-900">One Time</button>
-                          <button className="px-6 py-2 font-bold rounded-lg text-sm text-gray-500 hover:text-gray-900">Monthly</button>
+                          <button className="px-6 py-2 bg-white shadow font-bold rounded-lg text-sm text-vedam-charcoal">One Time</button>
+                          <button className="px-6 py-2 font-bold rounded-lg text-sm text-gray-500 hover:text-vedam-charcoal">Monthly</button>
                         </div>
                         <div className="grid grid-cols-3 gap-3 mb-6">
                           {[25, 50, 100].map(val => (
@@ -127,7 +127,7 @@ const NgoDemoPage = ({ onBack }) => {
                         </div>
                         <div className="relative mb-8">
                           <span className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-gray-400 text-xl">$</span>
-                          <input type="number" value={amount} onChange={(e) => setAmount(Number(e.target.value))} className="w-full py-4 pl-10 pr-4 bg-gray-50 border border-gray-200 rounded-xl font-bold text-xl focus:outline-none focus:border-rose-500 transition-colors" />
+                          <input type="number" value={amount} onChange={(e) => setAmount(Number(e.target.value))} className="w-full py-4 pl-10 pr-4 bg-vedam-cream border border-gray-200 rounded-xl font-bold text-xl focus:outline-none focus:border-rose-500 transition-colors" />
                         </div>
 
                         <button onClick={handleDonate} className="w-full py-5 font-bold rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-xl shadow-rose-600/20 text-xl transition-transform hover:scale-[1.02]">
@@ -138,7 +138,7 @@ const NgoDemoPage = ({ onBack }) => {
                     ) : (
                       <motion.div key="success" initial={{opacity:0, x:-50}} animate={{opacity:1, x:0}} className="flex flex-col items-center justify-center text-center h-full">
                         <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-500"><Heart className="w-12 h-12 fill-green-500"/></div>
-                        <h4 className="font-bold text-3xl mb-4 font-serif text-gray-900">Thank you so much!</h4>
+                        <h4 className="font-bold text-3xl mb-4 font-serif text-vedam-charcoal">Thank you so much!</h4>
                         <p className="text-gray-600 mb-8 text-lg">Your donation of ${amount} has been securely processed. A tax receipt has been emailed to you.</p>
                       </motion.div>
                     )}
@@ -164,7 +164,7 @@ const NgoDemoPage = ({ onBack }) => {
         {/* Helper overlay when fullscreen to prevent getting trapped */}
         {isFrontendFullscreen && (
           <div className="fixed bottom-6 right-6 z-[110]">
-            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-black text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
+            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-vedam-charcoal text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
               <Minimize2 className="w-5 h-5"/> Exit Fullscreen Website
             </button>
           </div>
@@ -192,7 +192,7 @@ const NgoDemoPage = ({ onBack }) => {
               <a href="#" className="flex items-center gap-3 px-4 py-3 text-rose-200 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-colors"><FileText className="w-5 h-5"/> Tax Receipts</a>
             </nav>
           </div>
-          <div className="flex-1 bg-gray-50 flex flex-col">
+          <div className="flex-1 bg-vedam-cream flex flex-col">
             <div className="h-16 bg-white border-b border-gray-200 flex items-center px-6 shrink-0"><h3 className="font-bold text-lg">Campaign Analytics</h3></div>
             <div className="p-8 overflow-auto flex flex-col lg:flex-row gap-6">
               
@@ -205,12 +205,12 @@ const NgoDemoPage = ({ onBack }) => {
                       <p className="font-bold text-green-600">+${amount}</p>
                     </div>
                   )}
-                  <div className="flex justify-between items-center p-4 bg-gray-50 border border-gray-100 rounded-xl">
+                  <div className="flex justify-between items-center p-4 bg-vedam-cream border border-gray-100 rounded-xl">
                     <div className="flex items-center gap-3"><div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 font-bold text-sm">A</div><p className="font-bold">Anonymous</p></div>
                     <p className="font-bold text-green-600">+$100</p>
                   </div>
-                  <div className="flex justify-between items-center p-4 bg-gray-50 border border-gray-100 rounded-xl">
-                    <div className="flex items-center gap-3"><div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-sm">M</div><p className="font-bold">Mark S.</p></div>
+                  <div className="flex justify-between items-center p-4 bg-vedam-cream border border-gray-100 rounded-xl">
+                    <div className="flex items-center gap-3"><div className="w-10 h-10 rounded-full bg-vedam-gold/20 flex items-center justify-center text-vedam-gold font-bold text-sm">M</div><p className="font-bold">Mark S.</p></div>
                     <p className="font-bold text-green-600">+$25</p>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const NgoDemoPage = ({ onBack }) => {
       </section>
 
       {/* Section 3: Complete Description */}
-      <section className="py-20 px-6 lg:px-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-20 px-6 lg:px-16 bg-vedam-cream border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-heading font-bold mb-4">Comprehensive Features</h2>
@@ -285,7 +285,7 @@ const NgoDemoPage = ({ onBack }) => {
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-rose-600 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                   {i + 1}
                 </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-vedam-cream p-6 rounded-2xl border border-gray-100 shadow-sm">
                   <h3 className="font-bold text-lg mb-1">{step.title}</h3>
                   <p className="text-gray-600">{step.desc}</p>
                 </div>
@@ -297,7 +297,7 @@ const NgoDemoPage = ({ onBack }) => {
 
       {/* CTA */}
       <div className="text-center relative z-10 pb-12 pt-12 border-t border-gray-100">
-        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-blue text-white font-bold text-lg rounded-full hover:bg-blue-700 transition-all shadow-2xl hover:-translate-y-1">
+        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-charcoal text-white font-bold text-lg rounded-full hover:bg-black transition-all shadow-2xl hover:-translate-y-1">
           Request Similar Project
         </button>
       </div>

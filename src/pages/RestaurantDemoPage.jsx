@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Utensils, ShoppingCart, CheckCircle, LayoutDashboard, ListOrdered, Settings, TrendingUp, ShieldCheck, Zap, Server, Monitor, Maximize2, Minimize2, MapPin, Clock, MessageCircle, Mail, Lock, Info } from 'lucide-react';
 
 const RestaurantDemoPage = ({ onBack }) => {
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const [cart, setCart] = useState({});
   const [checkoutStep, setCheckoutStep] = useState(0); 
   const [isFrontendFullscreen, setIsFrontendFullscreen] = useState(false);
@@ -23,15 +23,15 @@ const RestaurantDemoPage = ({ onBack }) => {
   };
 
   return (
-    <div className="min-h-screen bg-white relative pb-24 font-sans text-gray-900">
+    <div className="min-h-screen bg-white relative pb-24 font-sans text-vedam-charcoal">
       <header className="bg-white px-6 py-4 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-3"><Utensils className="w-8 h-8 text-orange-500" /><h2 className="text-xl md:text-2xl font-bold font-heading text-black">Restaurant System</h2></div>
+        <div className="flex items-center gap-3"><Utensils className="w-8 h-8 text-orange-500" /><h2 className="text-xl md:text-2xl font-bold font-heading text-vedam-charcoal">Restaurant System</h2></div>
         <button onClick={onBack} className="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl text-sm font-bold flex items-center gap-2 transition-colors"><ArrowLeft className="w-4 h-4" /> Back to Site</button>
       </header>
 
       {/* Demo Notice Banner */}
-      <div className="bg-blue-50 border-b border-blue-100 px-6 py-3 text-center z-40 relative">
-        <p className="text-blue-800 font-bold text-sm sm:text-base flex items-center justify-center gap-2">
+      <div className="bg-vedam-cream border-b border-vedam-gold/20 px-6 py-3 text-center z-40 relative">
+        <p className="text-vedam-charcoal font-bold text-sm sm:text-base flex items-center justify-center gap-2">
           <Info className="w-5 h-5 shrink-0" /> 
           <span><strong>Note:</strong> This is just a demonstration. Your actual platform will be 100% custom-built according to your specific business needs.</span>
         </p>
@@ -39,12 +39,12 @@ const RestaurantDemoPage = ({ onBack }) => {
 
       {/* Hero */}
       <section className="pt-20 pb-12 px-6 lg:px-16 text-center max-w-5xl mx-auto">
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-black mb-6">Complete Food Ordering Ecosystem</motion.h1>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-vedam-charcoal mb-6">Complete Food Ordering Ecosystem</motion.h1>
         <p className="text-xl text-gray-600">A seamless customer ordering app perfectly integrated with a powerful restaurant management dashboard.</p>
       </section>
 
       {/* Section 1: Customer Frontend Simulator */}
-      <section className="py-16 px-6 lg:px-16 bg-gray-50 border-y border-gray-200 relative">
+      <section className="py-16 px-6 lg:px-16 bg-vedam-cream border-y border-gray-200 relative">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-600 rounded-full font-bold text-sm mb-6"><Monitor className="w-4 h-4"/> Live Website Simulator</div>
           <h2 className="text-4xl font-heading font-bold mb-4">The Diner Experience</h2>
@@ -189,7 +189,7 @@ const RestaurantDemoPage = ({ onBack }) => {
         {/* Helper overlay when fullscreen to prevent getting trapped */}
         {isFrontendFullscreen && (
           <div className="fixed bottom-6 right-6 z-[110]">
-            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-black text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
+            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-vedam-charcoal text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
               <Minimize2 className="w-5 h-5"/> Exit Fullscreen Website
             </button>
           </div>
@@ -199,7 +199,7 @@ const RestaurantDemoPage = ({ onBack }) => {
       {/* Section 2: Admin Dashboard */}
       <section className="py-20 px-6 lg:px-16 bg-white">
         <div className="max-w-6xl mx-auto mb-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-600 rounded-full font-bold text-sm mb-6"><Server className="w-4 h-4"/> Admin Backend</div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-vedam-gold/20 text-vedam-gold rounded-full font-bold text-sm mb-6"><Server className="w-4 h-4"/> Admin Backend</div>
           <h2 className="text-4xl font-heading font-bold mb-4">Powerful Kitchen Management</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">Orders placed on the website instantly appear on the dashboard. Manage your menu, track analytics, and control the entire restaurant from a single screen.</p>
         </div>
@@ -217,12 +217,12 @@ const RestaurantDemoPage = ({ onBack }) => {
               <a href="#" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-colors"><Settings className="w-5 h-5"/> Settings</a>
             </nav>
           </div>
-          <div className="flex-1 bg-gray-50 flex flex-col">
+          <div className="flex-1 bg-vedam-cream flex flex-col">
             <div className="h-16 bg-white border-b border-gray-200 flex items-center px-6 shrink-0"><h3 className="font-bold text-lg">Live Orders Queue</h3></div>
             <div className="p-6 overflow-auto">
               <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
                 <table className="w-full text-left text-sm">
-                  <thead className="bg-gray-50 border-b border-gray-200">
+                  <thead className="bg-vedam-cream border-b border-gray-200">
                     <tr><th className="p-4">Order ID</th><th className="p-4">Items</th><th className="p-4">Status</th><th className="p-4">Total</th></tr>
                   </thead>
                   <tbody>
@@ -238,7 +238,7 @@ const RestaurantDemoPage = ({ onBack }) => {
                     </tr>
                     <tr className="border-b border-gray-100">
                       <td className="p-4 font-bold">#1041</td><td className="p-4 text-gray-600">1x Margherita Pizza</td>
-                      <td className="p-4"><span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-xs font-bold">Ready</span></td><td className="p-4 font-bold">$16.00</td>
+                      <td className="p-4"><span className="bg-vedam-gold/20 text-yellow-700 px-2 py-1 rounded-md text-xs font-bold">Ready</span></td><td className="p-4 font-bold">$16.00</td>
                     </tr>
                     <tr>
                       <td className="p-4 font-bold">#1040</td><td className="p-4 text-gray-600">3x Spicy Tuna Roll</td>
@@ -253,7 +253,7 @@ const RestaurantDemoPage = ({ onBack }) => {
       </section>
 
       {/* Section 3: Complete Description */}
-      <section className="py-20 px-6 lg:px-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-20 px-6 lg:px-16 bg-vedam-cream border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-heading font-bold mb-4">Comprehensive Features</h2>
@@ -308,7 +308,7 @@ const RestaurantDemoPage = ({ onBack }) => {
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-orange-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                   {i + 1}
                 </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-vedam-cream p-6 rounded-2xl border border-gray-100 shadow-sm">
                   <h3 className="font-bold text-lg mb-1">{step.title}</h3>
                   <p className="text-gray-600">{step.desc}</p>
                 </div>
@@ -320,7 +320,7 @@ const RestaurantDemoPage = ({ onBack }) => {
 
       {/* CTA */}
       <div className="text-center relative z-10 pb-12 pt-12 border-t border-gray-100">
-        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-blue text-white font-bold text-lg rounded-full hover:bg-blue-700 transition-all shadow-2xl hover:-translate-y-1">
+        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-charcoal text-white font-bold text-lg rounded-full hover:bg-black transition-all shadow-2xl hover:-translate-y-1">
           Request Similar Project
         </button>
       </div>

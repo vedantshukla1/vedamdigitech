@@ -9,9 +9,9 @@ const TechStack = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 overflow-hidden border-y border-gray-100">
+    <section className="py-20 bg-vedam-cream overflow-hidden border-y border-gray-100">
       <div className="container mx-auto px-6 lg:px-16 mb-10 text-center">
-        <h2 className="text-3xl font-heading font-bold text-black">Our Tech Stack</h2>
+        <h2 className="text-3xl font-heading font-bold text-vedam-charcoal">Our Tech Stack</h2>
       </div>
       
       <div className="relative flex overflow-x-hidden group">
@@ -21,7 +21,7 @@ const TechStack = () => {
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
           {[...techs, ...techs, ...techs].map((tech, index) => (
-            <span key={index} className="mx-8 text-2xl font-bold text-gray-300 hover:text-vedam-blue transition-colors cursor-pointer">
+            <span key={index} className="mx-8 text-2xl font-bold text-gray-300 hover:text-vedam-gold transition-colors cursor-pointer">
               {tech}
             </span>
           ))}

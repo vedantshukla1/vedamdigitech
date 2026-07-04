@@ -26,10 +26,11 @@ const About = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-black">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-vedam-charcoal">
               Ancient Wisdom, <br/> Modern Solutions.
             </h2>
-            <div className="w-20 h-1 bg-vedam-blue mb-8"></div>
+            <div className="w-20 h-1 bg-vedam-charcoal mb-8"></div>
+            
             <p className="text-xl text-gray-700 leading-relaxed font-light mb-8">
               "Vedam" means Knowledge. We bring that ancient wisdom to modern digital solutions. As a full-service Digital & AI Technology Company based in Lucknow, India, we blend deep technical expertise with cutting-edge AI.
             </p>
@@ -46,8 +47,8 @@ const About = () => {
             className="grid grid-cols-2 gap-6"
           >
             {stats.map((stat, index) => (
-              <div key={index} className="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-vedam-blue/30 hover:shadow-xl transition-all group">
-                <h3 className="text-5xl font-heading font-extrabold text-black mb-2 group-hover:text-vedam-blue transition-colors">
+              <div key={index} className="p-8 rounded-2xl bg-vedam-cream border border-gray-100 hover:border-vedam-gold/30 hover:shadow-xl transition-all group">
+                <h3 className="text-5xl font-heading font-extrabold text-vedam-charcoal mb-2 group-hover:text-vedam-gold transition-colors">
                   {inView ? <span>{stat.number}</span> : "0"}
                   {stat.suffix}
                 </h3>

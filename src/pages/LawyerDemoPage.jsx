@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Scale, Lock, Upload, FileCheck, ShieldCheck, Briefcase, FileText, CreditCard, FolderOpen, Monitor, Server, Bell, Maximize2, Minimize2, Phone, Mail, Info } from 'lucide-react';
+import { ArrowLeft, Scale, Lock, Upload, FileCheck, ShieldCheck, Briefcase, FileText, CreditCard, FolderOpen, Monitor, Server, Bell, Maximize2, Minimize2, Phone, Mail, Info, CheckCircle } from 'lucide-react';
 
 const LawyerDemoPage = ({ onBack }) => {
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
   const [isFrontendFullscreen, setIsFrontendFullscreen] = useState(false);
@@ -14,15 +14,15 @@ const LawyerDemoPage = ({ onBack }) => {
   };
 
   return (
-    <div className="min-h-screen bg-white relative pb-24 font-sans text-gray-900">
+    <div className="min-h-screen bg-white relative pb-24 font-sans text-vedam-charcoal">
       <header className="bg-white px-6 py-4 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-3"><Scale className="w-8 h-8 text-vedam-blue" /><h2 className="text-xl md:text-2xl font-bold font-heading text-black">Legal Platform</h2></div>
+        <div className="flex items-center gap-3"><Scale className="w-8 h-8 text-vedam-gold" /><h2 className="text-xl md:text-2xl font-bold font-heading text-vedam-charcoal">Legal Platform</h2></div>
         <button onClick={onBack} className="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl text-sm font-bold flex items-center gap-2 transition-colors"><ArrowLeft className="w-4 h-4" /> Back to Site</button>
       </header>
 
       {/* Demo Notice Banner */}
-      <div className="bg-blue-50 border-b border-blue-100 px-6 py-3 text-center z-40 relative">
-        <p className="text-blue-800 font-bold text-sm sm:text-base flex items-center justify-center gap-2">
+      <div className="bg-vedam-cream border-b border-vedam-gold/20 px-6 py-3 text-center z-40 relative">
+        <p className="text-vedam-charcoal font-bold text-sm sm:text-base flex items-center justify-center gap-2">
           <Info className="w-5 h-5 shrink-0" /> 
           <span><strong>Note:</strong> This is just a demonstration. Your actual platform will be 100% custom-built according to your specific business needs.</span>
         </p>
@@ -30,14 +30,14 @@ const LawyerDemoPage = ({ onBack }) => {
 
       {/* Hero */}
       <section className="pt-20 pb-12 px-6 lg:px-16 text-center max-w-5xl mx-auto">
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-black mb-6">Secure Legal Portal</motion.h1>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-vedam-charcoal mb-6">Secure Legal Portal</motion.h1>
         <p className="text-xl text-gray-600">An encrypted client-facing document vault combined with a powerful case management backend for attorneys.</p>
       </section>
 
       {/* Section 1: Customer Frontend Simulator */}
-      <section className="py-16 px-6 lg:px-16 bg-gray-50 border-y border-gray-200 relative">
+      <section className="py-16 px-6 lg:px-16 bg-vedam-cream border-y border-gray-200 relative">
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full font-bold text-sm mb-6"><Monitor className="w-4 h-4"/> Live Website Simulator</div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-vedam-gold/20 text-vedam-gold rounded-full font-bold text-sm mb-6"><Monitor className="w-4 h-4"/> Live Website Simulator</div>
           <h2 className="text-4xl font-heading font-bold mb-4">The Client Vault Experience</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">Maximize the window below to interact with the ultra-secure client portal where documents are uploaded with bank-level encryption.</p>
         </div>
@@ -141,7 +141,7 @@ const LawyerDemoPage = ({ onBack }) => {
         {/* Helper overlay when fullscreen to prevent getting trapped */}
         {isFrontendFullscreen && (
           <div className="fixed bottom-6 right-6 z-[110]">
-            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-black text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
+            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-vedam-charcoal text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
               <Minimize2 className="w-5 h-5"/> Exit Fullscreen Website
             </button>
           </div>
@@ -168,7 +168,7 @@ const LawyerDemoPage = ({ onBack }) => {
               <a href="#" className="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-colors"><CreditCard className="w-5 h-5"/> Billing</a>
             </nav>
           </div>
-          <div className="flex-1 bg-gray-50 flex flex-col">
+          <div className="flex-1 bg-vedam-cream flex flex-col">
             <div className="h-16 bg-white border-b border-gray-200 flex items-center px-6 shrink-0"><h3 className="font-bold text-lg">Case Pipeline Overview</h3></div>
             <div className="p-8 overflow-auto">
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6 flex justify-between items-center">
@@ -176,7 +176,7 @@ const LawyerDemoPage = ({ onBack }) => {
                   <h4 className="font-bold text-lg">Case #8492-B</h4>
                   <p className="text-gray-500">Estate Planning - Client: J. Doe</p>
                 </div>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">In Progress</span>
+                <span className="bg-vedam-gold/20 text-yellow-700 px-3 py-1 rounded-full text-sm font-bold">In Progress</span>
               </div>
 
               <h4 className="font-bold text-lg mb-4 text-gray-700">Recent Activity</h4>
@@ -187,7 +187,7 @@ const LawyerDemoPage = ({ onBack }) => {
                   <p className="text-sm text-gray-400 font-medium">Just now</p>
                 </div>
                 <div className="p-4 border-b border-gray-100 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><CheckCircle className="w-5 h-5"/></div>
+                  <div className="w-10 h-10 rounded-full bg-vedam-gold/20 flex items-center justify-center text-vedam-gold"><CheckCircle className="w-5 h-5"/></div>
                   <div className="flex-1"><p className="font-bold">Retainer Invoice Paid</p><p className="text-sm text-gray-500">Invoice #INV-204</p></div>
                   <p className="text-sm text-gray-400 font-medium">Yesterday</p>
                 </div>
@@ -198,7 +198,7 @@ const LawyerDemoPage = ({ onBack }) => {
       </section>
 
       {/* Section 3: Complete Description */}
-      <section className="py-20 px-6 lg:px-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-20 px-6 lg:px-16 bg-vedam-cream border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-heading font-bold mb-4">Comprehensive Features</h2>
@@ -253,7 +253,7 @@ const LawyerDemoPage = ({ onBack }) => {
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-slate-900 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                   {i + 1}
                 </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-vedam-cream p-6 rounded-2xl border border-gray-100 shadow-sm">
                   <h3 className="font-bold text-lg mb-1">{step.title}</h3>
                   <p className="text-gray-600">{step.desc}</p>
                 </div>
@@ -265,7 +265,7 @@ const LawyerDemoPage = ({ onBack }) => {
 
       {/* CTA */}
       <div className="text-center relative z-10 pb-12 pt-12 border-t border-gray-100">
-        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-blue text-white font-bold text-lg rounded-full hover:bg-blue-700 transition-all shadow-2xl hover:-translate-y-1">
+        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-charcoal text-white font-bold text-lg rounded-full hover:bg-black transition-all shadow-2xl hover:-translate-y-1">
           Request Similar Project
         </button>
       </div>

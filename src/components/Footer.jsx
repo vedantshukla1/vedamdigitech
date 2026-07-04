@@ -25,22 +25,22 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-black mb-4">Quick Links</h4>
+            <h4 className="font-bold text-vedam-charcoal mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-500 hover:text-vedam-blue transition-colors">Home</a></li>
-              <li><a href="#services" className="text-gray-500 hover:text-vedam-blue transition-colors">Services</a></li>
-              <li><a href="#projects" className="text-gray-500 hover:text-vedam-blue transition-colors">Projects</a></li>
-              <li><a href="#process" className="text-gray-500 hover:text-vedam-blue transition-colors">Process</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-vedam-gold transition-colors">Home</a></li>
+              <li><a href="#services" className="text-gray-500 hover:text-vedam-gold transition-colors">Services</a></li>
+              <li><a href="#projects" className="text-gray-500 hover:text-vedam-gold transition-colors">Projects</a></li>
+              <li><a href="#process" className="text-gray-500 hover:text-vedam-gold transition-colors">Process</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-bold text-black mb-4">Services</h4>
+            <h4 className="font-bold text-vedam-charcoal mb-4">Services</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-500 hover:text-vedam-blue transition-colors">AI Automation</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-vedam-blue transition-colors">Web Development</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-vedam-blue transition-colors">SaaS Products</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-vedam-blue transition-colors">SEO & Marketing</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-vedam-gold transition-colors">AI Automation</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-vedam-gold transition-colors">Web Development</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-vedam-gold transition-colors">Custom Software</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-vedam-gold transition-colors">SEO & Marketing</a></li>
             </ul>
           </div>
         </div>
@@ -48,8 +48,8 @@ const Footer = () => {
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>© 2025 Vedam Digitech. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <Link to="/privacy-policy" className="hover:text-vedam-blue transition-colors">Privacy Policy</Link>
-            <Link to="/terms-of-service" className="hover:text-vedam-blue transition-colors">Terms of Service</Link>
+            <Link to="/privacy-policy" className="hover:text-vedam-gold transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-vedam-gold transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

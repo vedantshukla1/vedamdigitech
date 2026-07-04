@@ -26,7 +26,7 @@ const AnimatedCounter = ({ from, to, duration = 2 }) => {
 
 const Stats = () => {
   const stats = [
-    { number: 100, label: "Projects", suffix: "+" },
+    { number: 100, label: "Deliveries", suffix: "+" },
     { number: 50, label: "Clients", suffix: "+" },
     { number: 5, label: "Years", suffix: "+" },
     { number: 10, label: "AI Solutions", suffix: "+" },
@@ -45,9 +45,9 @@ const Stats = () => {
               transition={{ delay: index * 0.1 }}
               className="flex flex-col items-center text-center px-4"
             >
-              <h3 className="text-4xl md:text-5xl font-heading font-extrabold text-black mb-2 flex items-center">
+              <h3 className="text-4xl md:text-5xl font-heading font-extrabold text-vedam-charcoal mb-2 flex items-center">
                 <AnimatedCounter from={0} to={stat.number} />
-                <span className="text-vedam-blue">{stat.suffix}</span>
+                <span className="text-vedam-gold">{stat.suffix}</span>
               </h3>
               <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">{stat.label}</p>
             </motion.div>

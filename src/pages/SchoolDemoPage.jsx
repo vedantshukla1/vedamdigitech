@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, GraduationCap, FileText, Download, Award, Calendar, MessageSquare, BarChart, Monitor, Server, CreditCard, Smartphone, Maximize2, Minimize2, Lock, BookOpen, Bell, Info } from 'lucide-react';
+import { ArrowLeft, GraduationCap, FileText, Download, Award, Calendar, MessageSquare, BarChart, Monitor, Server, CreditCard, Smartphone, Maximize2, Minimize2, Lock, BookOpen, Bell, Info, CheckCircle } from 'lucide-react';
 
 const SchoolDemoPage = ({ onBack }) => {
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const [downloading, setDownloading] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
   const [isFrontendFullscreen, setIsFrontendFullscreen] = useState(false);
@@ -14,15 +14,15 @@ const SchoolDemoPage = ({ onBack }) => {
   };
 
   return (
-    <div className="min-h-screen bg-white relative pb-24 font-sans text-gray-900">
+    <div className="min-h-screen bg-white relative pb-24 font-sans text-vedam-charcoal">
       <header className="bg-white px-6 py-4 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-3"><GraduationCap className="w-8 h-8 text-vedam-blue" /><h2 className="text-xl md:text-2xl font-bold font-heading text-black">EduPortal Platform</h2></div>
+        <div className="flex items-center gap-3"><GraduationCap className="w-8 h-8 text-vedam-gold" /><h2 className="text-xl md:text-2xl font-bold font-heading text-vedam-charcoal">EduPortal Platform</h2></div>
         <button onClick={onBack} className="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl text-sm font-bold flex items-center gap-2 transition-colors"><ArrowLeft className="w-4 h-4" /> Back to Site</button>
       </header>
 
       {/* Demo Notice Banner */}
-      <div className="bg-blue-50 border-b border-blue-100 px-6 py-3 text-center z-40 relative">
-        <p className="text-blue-800 font-bold text-sm sm:text-base flex items-center justify-center gap-2">
+      <div className="bg-vedam-cream border-b border-vedam-gold/20 px-6 py-3 text-center z-40 relative">
+        <p className="text-vedam-charcoal font-bold text-sm sm:text-base flex items-center justify-center gap-2">
           <Info className="w-5 h-5 shrink-0" /> 
           <span><strong>Note:</strong> This is just a demonstration. Your actual platform will be 100% custom-built according to your specific business needs.</span>
         </p>
@@ -30,14 +30,14 @@ const SchoolDemoPage = ({ onBack }) => {
 
       {/* Hero */}
       <section className="pt-20 pb-12 px-6 lg:px-16 text-center max-w-5xl mx-auto">
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-black mb-6">Student Management Portal</motion.h1>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-heading font-bold text-vedam-charcoal mb-6">Student Management Portal</motion.h1>
         <p className="text-xl text-gray-600">A unified frontend for parents and students, powered by a comprehensive administrative backend for schools.</p>
       </section>
 
       {/* Section 1: Customer Frontend Simulator */}
-      <section className="py-16 px-6 lg:px-16 bg-gray-50 border-y border-gray-200 relative">
+      <section className="py-16 px-6 lg:px-16 bg-vedam-cream border-y border-gray-200 relative">
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full font-bold text-sm mb-6"><Monitor className="w-4 h-4"/> Live Website Simulator</div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-vedam-gold/20 text-vedam-gold rounded-full font-bold text-sm mb-6"><Monitor className="w-4 h-4"/> Live Website Simulator</div>
           <h2 className="text-4xl font-heading font-bold mb-4">The Student & Parent Portal</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">Maximize the window below to interact with the secure, fully-featured portal where parents and students track progress.</p>
         </div>
@@ -94,8 +94,8 @@ const SchoolDemoPage = ({ onBack }) => {
                   <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600"><Calendar className="w-6 h-6"/></div>
                 </div>
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
-                  <div><p className="text-slate-500 text-sm font-bold mb-1">Fee Status</p><p className="text-3xl font-black text-indigo-600">Paid</p></div>
-                  <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600"><CreditCard className="w-6 h-6"/></div>
+                  <div><p className="text-slate-500 text-sm font-bold mb-1">Fee Status</p><p className="text-3xl font-black text-vedam-gold">Paid</p></div>
+                  <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-vedam-gold"><CreditCard className="w-6 h-6"/></div>
                 </div>
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
                   <div><p className="text-slate-500 text-sm font-bold mb-1">Class Rank</p><p className="text-3xl font-black text-orange-500">4th</p></div>
@@ -128,7 +128,7 @@ const SchoolDemoPage = ({ onBack }) => {
                       </tbody>
                     </table>
                     <div className="p-6 border-t border-slate-100 mt-auto bg-slate-50">
-                      <button onClick={handleDownload} disabled={downloading || downloaded} className={`w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 font-bold rounded-xl text-white transition-all shadow-md ${downloaded ? 'bg-green-500' : 'bg-indigo-600 hover:bg-indigo-700'}`}>
+                      <button onClick={handleDownload} disabled={downloading || downloaded} className={`w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 font-bold rounded-xl text-white transition-all shadow-md ${downloaded ? 'bg-green-500' : 'bg-vedam-charcoal hover:bg-indigo-700'}`}>
                         {downloading ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> : downloaded ? <><CheckCircle className="w-5 h-5"/> Downloaded to device</> : <><Download className="w-5 h-5"/> Download Full Report Card (PDF)</>}
                       </button>
                     </div>
@@ -139,10 +139,10 @@ const SchoolDemoPage = ({ onBack }) => {
                 <div className="flex flex-col gap-6">
                   {/* Notice Board */}
                   <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6">
-                    <h4 className="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2"><Bell className="w-5 h-5 text-indigo-600"/> Notice Board</h4>
+                    <h4 className="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2"><Bell className="w-5 h-5 text-vedam-gold"/> Notice Board</h4>
                     <div className="space-y-4">
                       <div className="p-4 bg-indigo-50 border border-indigo-100 rounded-xl">
-                        <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-1 block">Important</span>
+                        <span className="text-xs font-bold text-vedam-gold uppercase tracking-widest mb-1 block">Important</span>
                         <p className="font-bold text-sm text-indigo-900 mb-1">Parent-Teacher Meeting</p>
                         <p className="text-xs text-indigo-700">Scheduled for Friday, Oct 20th. Please book your slots via the calendar module.</p>
                       </div>
@@ -163,7 +163,7 @@ const SchoolDemoPage = ({ onBack }) => {
         {/* Helper overlay when fullscreen to prevent getting trapped */}
         {isFrontendFullscreen && (
           <div className="fixed bottom-6 right-6 z-[110]">
-            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-black text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
+            <button onClick={() => setIsFrontendFullscreen(false)} className="px-6 py-3 bg-vedam-charcoal text-white font-bold rounded-full shadow-2xl flex items-center gap-2 hover:bg-gray-800 transition-transform hover:scale-105">
               <Minimize2 className="w-5 h-5"/> Exit Fullscreen Website
             </button>
           </div>
@@ -191,11 +191,11 @@ const SchoolDemoPage = ({ onBack }) => {
               <a href="#" className="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-colors"><MessageSquare className="w-5 h-5"/> Communications</a>
             </nav>
           </div>
-          <div className="flex-1 bg-gray-50 flex flex-col">
+          <div className="flex-1 bg-vedam-cream flex flex-col">
             <div className="h-16 bg-white border-b border-gray-200 flex items-center px-6 shrink-0"><h3 className="font-bold text-lg">Class Performance: Grade 10</h3></div>
             <div className="p-8 overflow-auto flex flex-col gap-6">
               <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                <h4 className="font-bold text-lg mb-6 flex items-center gap-2"><BarChart className="w-5 h-5 text-indigo-600"/> Subject Averages</h4>
+                <h4 className="font-bold text-lg mb-6 flex items-center gap-2"><BarChart className="w-5 h-5 text-vedam-gold"/> Subject Averages</h4>
                 <div className="flex flex-col gap-5">
                   {[{sub: 'Mathematics', pct: 85}, {sub: 'Physics', pct: 78}, {sub: 'Literature', pct: 82}, {sub: 'History', pct: 90}].map(item => (
                     <div key={item.sub}>
@@ -211,7 +211,7 @@ const SchoolDemoPage = ({ onBack }) => {
       </section>
 
       {/* Section 3: Complete Description */}
-      <section className="py-20 px-6 lg:px-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-20 px-6 lg:px-16 bg-vedam-cream border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-heading font-bold mb-4">Comprehensive Features</h2>
@@ -219,32 +219,32 @@ const SchoolDemoPage = ({ onBack }) => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <CreditCard className="w-10 h-10 text-indigo-600 mb-4" />
+              <CreditCard className="w-10 h-10 text-vedam-gold mb-4" />
               <h3 className="font-bold text-xl mb-3">Automated Fee Collection</h3>
               <p className="text-gray-600 leading-relaxed">Integrated payment gateways with automated invoice generation and SMS reminders for upcoming tuition dues.</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <Smartphone className="w-10 h-10 text-indigo-600 mb-4" />
+              <Smartphone className="w-10 h-10 text-vedam-gold mb-4" />
               <h3 className="font-bold text-xl mb-3">Mobile App Ready</h3>
               <p className="text-gray-600 leading-relaxed">The entire architecture is designed to seamlessly compile into native iOS and Android apps for on-the-go access.</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <Award className="w-10 h-10 text-indigo-600 mb-4" />
+              <Award className="w-10 h-10 text-vedam-gold mb-4" />
               <h3 className="font-bold text-xl mb-3">Digital Gradebook</h3>
               <p className="text-gray-600 leading-relaxed">Teachers can input assignment scores and calculate weighted final grades automatically without using external spreadsheets.</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <FileText className="w-10 h-10 text-indigo-600 mb-4" />
+              <FileText className="w-10 h-10 text-vedam-gold mb-4" />
               <h3 className="font-bold text-xl mb-3">Automated Report Cards</h3>
               <p className="text-gray-600 leading-relaxed">Generate beautiful PDF report cards instantly at the end of each term, automatically pulling data directly from the gradebook.</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <BarChart className="w-10 h-10 text-indigo-600 mb-4" />
+              <BarChart className="w-10 h-10 text-vedam-gold mb-4" />
               <h3 className="font-bold text-xl mb-3">Performance Analytics</h3>
               <p className="text-gray-600 leading-relaxed">Principals can identify struggling students and track overall class performance across different subjects in real-time.</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <Bell className="w-10 h-10 text-indigo-600 mb-4" />
+              <Bell className="w-10 h-10 text-vedam-gold mb-4" />
               <h3 className="font-bold text-xl mb-3">Instant Notifications</h3>
               <p className="text-gray-600 leading-relaxed">Push notifications alert parents the moment a teacher logs a new grade, absence, or disciplinary report.</p>
             </div>
@@ -263,10 +263,10 @@ const SchoolDemoPage = ({ onBack }) => {
               { title: "Parent Notification", desc: "Parents receive an automated push notification or email to view the new data on their portal." }
             ].map((step, i) => (
               <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-indigo-600 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-vedam-charcoal text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                   {i + 1}
                 </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-vedam-cream p-6 rounded-2xl border border-gray-100 shadow-sm">
                   <h3 className="font-bold text-lg mb-1">{step.title}</h3>
                   <p className="text-gray-600">{step.desc}</p>
                 </div>
@@ -278,7 +278,7 @@ const SchoolDemoPage = ({ onBack }) => {
 
       {/* CTA */}
       <div className="text-center relative z-10 pb-12 pt-12 border-t border-gray-100">
-        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-blue text-white font-bold text-lg rounded-full hover:bg-blue-700 transition-all shadow-2xl hover:-translate-y-1">
+        <button onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="inline-flex items-center justify-center px-10 py-5 bg-vedam-charcoal text-white font-bold text-lg rounded-full hover:bg-black transition-all shadow-2xl hover:-translate-y-1">
           Request Similar Project
         </button>
       </div>

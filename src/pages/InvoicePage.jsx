@@ -4,7 +4,7 @@ import { ArrowLeft, Sparkles, FileText, Send, Loader2, CheckCircle, DollarSign, 
 
 const InvoicePage = ({ onBack }) => {
   const [status, setStatus] = useState('idle');
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const handleGenerate = () => {
     setStatus('generating');
@@ -12,25 +12,25 @@ const InvoicePage = ({ onBack }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 relative pb-24 overflow-hidden font-sans text-gray-900">
+    <div className="min-h-screen bg-vedam-cream relative pb-24 overflow-hidden font-sans text-vedam-charcoal">
       <header className="bg-white px-6 py-4 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-3"><FileText className="w-8 h-8 text-vedam-blue" /><h2 className="text-xl md:text-2xl font-bold font-heading text-black">AI Billing</h2></div>
+        <div className="flex items-center gap-3"><FileText className="w-8 h-8 text-vedam-gold" /><h2 className="text-xl md:text-2xl font-bold font-heading text-vedam-charcoal">AI Billing</h2></div>
         <button onClick={onBack} className="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl text-sm font-bold flex items-center gap-2 transition-colors"><ArrowLeft className="w-4 h-4" /> Back to Site</button>
       </header>
 
       {/* Demo Notice Banner */}
-      <div className="bg-blue-50 border-b border-blue-100 px-6 py-3 text-center z-40 relative">
-        <p className="text-blue-800 font-bold text-sm sm:text-base flex items-center justify-center gap-2">
+      <div className="bg-vedam-cream border-b border-vedam-gold/20 px-6 py-3 text-center z-40 relative">
+        <p className="text-vedam-charcoal font-bold text-sm sm:text-base flex items-center justify-center gap-2">
           <Info className="w-5 h-5 shrink-0" /> 
           <span><strong>Note:</strong> This is just a demonstration. Your actual platform will be 100% custom-built according to your specific business needs.</span>
         </p>
       </div>
 
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-vedam-blue/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/4 translate-x-1/4"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-vedam-charcoal/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/4 translate-x-1/4"></div>
 
       <main className="container mx-auto px-6 lg:px-16 pt-16 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-6xl font-heading font-bold text-black mb-6">AI Invoice & Billing</motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-6xl font-heading font-bold text-vedam-charcoal mb-6">AI Invoice & Billing</motion.h1>
           <p className="text-lg text-gray-600">The AI automatically calculates billable hours, drafts invoices, and sends them to clients on the 1st of every month.</p>
         </div>
 
@@ -38,20 +38,20 @@ const InvoicePage = ({ onBack }) => {
           <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
             <div className="flex gap-2"><div className="w-3 h-3 rounded-full bg-red-400"></div><div className="w-3 h-3 rounded-full bg-amber-400"></div><div className="w-3 h-3 rounded-full bg-green-400"></div></div>
           </div>
-          <div className="p-8 md:p-12 min-h-[400px] bg-gray-50/50">
+          <div className="p-8 md:p-12 min-h-[400px] bg-vedam-cream/50">
             {status === 'idle' && (
               <div className="text-center space-y-6 max-w-md mx-auto py-12">
-                <div className="w-20 h-20 bg-vedam-blue/10 text-vedam-blue rounded-full flex items-center justify-center mx-auto mb-4"><DollarSign className="w-10 h-10" /></div>
+                <div className="w-20 h-20 bg-vedam-charcoal/10 text-vedam-gold rounded-full flex items-center justify-center mx-auto mb-4"><DollarSign className="w-10 h-10" /></div>
                 <h3 className="text-2xl font-bold font-heading">End of Month Run</h3>
                 <p className="text-gray-500">Extracts data from your timesheets & CRM to generate 45 client invoices.</p>
-                <button onClick={handleGenerate} className="w-full py-4 bg-black text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg hover:bg-gray-800">
+                <button onClick={handleGenerate} className="w-full py-4 bg-vedam-charcoal text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg hover:bg-gray-800">
                   <Sparkles className="w-5 h-5" /> Auto-Generate Invoices
                 </button>
               </div>
             )}
             {status === 'generating' && (
               <div className="flex flex-col items-center justify-center py-20 text-center">
-                <Loader2 className="w-12 h-12 text-black animate-spin mb-6" />
+                <Loader2 className="w-12 h-12 text-vedam-charcoal animate-spin mb-6" />
                 <h3 className="text-xl font-bold mb-2">Compiling Timesheets & Drafting PDFs...</h3>
                 <p className="text-gray-500">Calculating taxes and formatting documents...</p>
               </div>
@@ -64,9 +64,9 @@ const InvoicePage = ({ onBack }) => {
                 </div>
                 <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm p-2">
                   {[ {name: "Acme Corp", amt: "$4,500"}, {name: "TechFlow", amt: "$2,100"}, {name: "Elevate Real Estate", amt: "$8,000"} ].map((inv, i) => (
-                    <div key={i} className="flex justify-between items-center p-4 hover:bg-gray-50 border-b border-gray-100 last:border-0">
-                      <div className="flex items-center gap-4"><FileText className="text-vedam-blue" /><div><p className="font-bold">{inv.name}</p><p className="text-xs text-gray-500">Due in 30 days</p></div></div>
-                      <div className="flex items-center gap-6"><span className="font-bold text-lg">{inv.amt}</span><button className="text-sm bg-vedam-blue/10 text-vedam-blue font-bold px-4 py-2 rounded-lg flex items-center gap-2"><Send className="w-4 h-4" /> Send Email</button></div>
+                    <div key={i} className="flex justify-between items-center p-4 hover:bg-vedam-cream border-b border-gray-100 last:border-0">
+                      <div className="flex items-center gap-4"><FileText className="text-vedam-gold" /><div><p className="font-bold">{inv.name}</p><p className="text-xs text-gray-500">Due in 30 days</p></div></div>
+                      <div className="flex items-center gap-6"><span className="font-bold text-lg">{inv.amt}</span><button className="text-sm bg-vedam-charcoal/10 text-vedam-gold font-bold px-4 py-2 rounded-lg flex items-center gap-2"><Send className="w-4 h-4" /> Send Email</button></div>
                     </div>
                   ))}
                 </div>
@@ -94,7 +94,7 @@ const InvoicePage = ({ onBack }) => {
         <div className="mt-24 text-center relative z-10">
           <button 
             onClick={() => { onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }}
-            className="inline-flex items-center justify-center px-10 py-5 bg-vedam-blue text-white font-bold text-lg rounded-full hover:bg-blue-700 transition-all shadow-2xl hover:shadow-vedam-blue/30 hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-10 py-5 bg-vedam-charcoal text-white font-bold text-lg rounded-full hover:bg-black transition-all shadow-2xl hover:shadow-vedam-gold/30 hover:-translate-y-1"
           >
             Request Similar Project
           </button>

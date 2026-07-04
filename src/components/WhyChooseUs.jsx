@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-heading font-bold text-black"
+            className="text-4xl md:text-5xl font-heading font-bold text-vedam-charcoal"
           >
             Why Choose Us
           </motion.h2>
@@ -28,12 +28,12 @@ const WhyChooseUs = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex flex-col items-center text-center p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-vedam-blue hover:shadow-xl transition-all"
+              className="flex flex-col items-center text-center p-8 bg-vedam-cream rounded-2xl border border-gray-100 hover:border-vedam-gold hover:shadow-xl transition-all"
             >
-              <div className="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center text-vedam-blue mb-6">
+              <div className="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center text-vedam-gold mb-6">
                 {React.cloneElement(feature.icon, { className: 'w-8 h-8' })}
               </div>
-              <h3 className="text-xl font-bold font-heading text-black">{feature.title}</h3>
+              <h3 className="text-xl font-bold font-heading text-vedam-charcoal">{feature.title}</h3>
             </motion.div>
           ))}
         </div>

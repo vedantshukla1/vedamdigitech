@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --color-vedam-blue: #2563EB;
-  --color-vedam-gold: #F59E0B;
+  --color-vedam-charcoal: #222222;
+  --color-vedam-cream: #ffffff;
+  --color-vedam-gold: #C5A059;
+  --color-vedam-accent: #C5A059; 
   --font-sans: "Inter", sans-serif;
-  --font-heading: "Sora", sans-serif;
+
+  --font-heading: "Inter", sans-serif;
 }
 
 @layer base {
   body {
-    background-color: white;
-    color: #111827;
+    background-color: var(--color-vedam-cream);
+    color: var(--color-vedam-charcoal);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: black;
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    color: var(--color-vedam-charcoal);
   }
 }
+

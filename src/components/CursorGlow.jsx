@@ -18,21 +18,20 @@ const CursorGlow = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-96 h-96 rounded-full pointer-events-none z-0 hidden lg:block mix-blend-multiply opacity-30"
-      style={{
-        background: 'radial-gradient(circle, rgba(0, 102, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%)',
-      }}
+      className="fixed top-0 left-0 w-10 h-10 border border-vedam-gold rounded-full pointer-events-none z-50 hidden lg:flex items-center justify-center mix-blend-difference"
       animate={{
-        x: mousePosition.x - 192, // half width
-        y: mousePosition.y - 192, // half height
+        x: mousePosition.x - 20, // center offset (half of 40px)
+        y: mousePosition.y - 20,
       }}
       transition={{
         type: "spring",
-        stiffness: 150,
-        damping: 15,
+        stiffness: 400,
+        damping: 30,
         mass: 0.1
       }}
-    />
+    >
+      <div className="w-1.5 h-1.5 bg-vedam-gold rounded-full"></div>
+    </motion.div>
   );
 };
 

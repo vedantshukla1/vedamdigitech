@@ -10,52 +10,29 @@ const Portfolio = ({ onNavigateToDynamic }) => {
 
   const projects = [
     // AI
-    { id: 1, name: "AI Lead Generation Agent", category: "AI", desc: "Auto-finds & contacts leads on LinkedIn/email", image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" },
-    { id: 2, name: "AI Customer Support Chatbot", category: "AI", desc: "24/7 bot for websites and WhatsApp", image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" },
-    { id: 3, name: "AI Social Media Manager", category: "AI", desc: "Auto-creates & posts daily content", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80" },
-    { id: 4, name: "AI Invoice & Billing", category: "AI", desc: "Auto-generates and sends invoices", image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
-    { id: 5, name: "AI WhatsApp Business Bot", category: "AI", desc: "Auto-replies, booking, order tracking", image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=800&q=80" },
-    { id: 6, name: "AI HR Recruitment Agent", category: "AI", desc: "Screens resumes & schedules interviews", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" },
-    { id: 7, name: "AI Review Responder", category: "AI", desc: "Auto-responds to Google/Zomato reviews", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" },
-    { id: 8, name: "AI Report Generator", category: "AI", desc: "Auto-creates weekly business reports", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" },
+    { id: 1, name: "AI Calling Agent", category: "AI", desc: "Human-like AI caller with integrated CRM tracking.", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80", tech: ["Twilio", "ElevenLabs", "CRM Integration"], results: ["10k Calls/Day", "Converted 15% Leads"] },
+    { id: 2, name: "AI Lead Generation Agent", category: "AI", desc: "Auto-finds & contacts leads, logging directly to CRM.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80", tech: ["Python", "OpenAI", "CRM Integration"], results: ["+300% Leads Generated", "Saved 120 hrs/mo"] },
+    { id: 3, name: "AI Customer Support Chatbot", category: "AI", desc: "24/7 bot syncs tickets & context with your CRM.", image: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=800&q=80", tech: ["React", "Node.js", "CRM Integration"], results: ["85% Queries Automated", "24/7 Instant Support"] },
+    { id: 4, name: "AI Social Media Manager", category: "AI", desc: "Auto-creates posts & tracks engagement in CRM.", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80", tech: ["Python", "Canva API", "CRM Integration"], results: ["40hrs Saved/mo", "2x Engagement"] },
+    { id: 5, name: "AI WhatsApp Business Bot", category: "AI", desc: "Auto-replies & bookings synced live with CRM.", image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&q=80", tech: ["WhatsApp API", "Python", "CRM Integration"], results: ["+40% Sales", "0 Missed Messages"] },
+    { id: 6, name: "AI Content Generator", category: "AI", desc: "Generates blog, social, & ad copy driven by CRM data.", image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80", tech: ["Next.js", "OpenAI", "CRM Integration"], results: ["Instant Content", "Highly Scalable"] },
     
     // Web & App
-    { id: 9, name: "Restaurant Web + Ordering", category: "Web & App", desc: "Full ordering system with payment gateway", image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" },
-    { id: 10, name: "Doctor Booking App", category: "Web & App", desc: "Appointment + patient management system", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" },
-    { id: 11, name: "Real Estate Property Listing", category: "Web & App", desc: "Advanced search, filters, virtual tours", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" },
-    { id: 12, name: "School/Coaching Web + App", category: "Web & App", desc: "Admissions, fees, results management", image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" },
-    { id: 13, name: "E-commerce Store + AI", category: "Web & App", desc: "Smart product recommendations engine", image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80" },
-    { id: 14, name: "Lawyer Portfolio + Portal", category: "Web & App", desc: "Document sharing and case tracking", image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&q=80" },
-    { id: 15, name: "Event Management Web", category: "Web & App", desc: "Ticketing, RSVP, guest management", image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80" },
-    { id: 16, name: "NGO Trust Website", category: "Web & App", desc: "Online donations, volunteer registration", image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" },
+    { id: 9, name: "Restaurant Web + Ordering", category: "Web & App", desc: "Full ordering system with payment gateway", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80", tech: ["Next.js", "Tailwind", "Stripe"], results: ["+25% Online Orders", "Zero Commission Fees"] },
+    { id: 10, name: "Doctor Booking App", category: "Web & App", desc: "Appointment + patient management system", image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80", tech: ["React Native", "Node.js", "PostgreSQL"], results: ["1000+ Bookings/mo", "Seamless Patient DB"] },
+    { id: 11, name: "Real Estate Property Listing", category: "Web & App", desc: "Advanced search, filters, virtual tours", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80", tech: ["Next.js", "Prisma", "AWS S3"], results: ["3x Traffic Increase", "Faster Load Times"] },
+    { id: 12, name: "School/Coaching Web + App", category: "Web & App", desc: "Admissions, fees, results management", image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80", tech: ["React", "Express", "MongoDB"], results: ["Paperless Admin", "Parent Dashboard"] },
+    { id: 13, name: "E-commerce Store + AI", category: "Web & App", desc: "Smart product recommendations engine", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80", tech: ["Shopify Plus", "React", "Python"], results: ["+18% AOV", "Custom UI/UX"] },
 
-    // SaaS
-    { id: 17, name: "Local Business Dashboard", category: "SaaS", desc: "Reviews, leads, analytics in one place", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" },
-    { id: 18, name: "AI Content Writing SaaS", category: "SaaS", desc: "Blog, social, ad copy generator", image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80" },
-    { id: 19, name: "WhatsApp Marketing SaaS", category: "SaaS", desc: "Bulk messaging + automation platform", image: "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?w=800&q=80" },
-    { id: 20, name: "Invoice & Accounting SaaS", category: "SaaS", desc: "GST-ready simple billing tool", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" },
-    { id: 21, name: "Appointment Booking SaaS", category: "SaaS", desc: "White-label for any business type", image: "https://images.unsplash.com/photo-1506784951206-b96275815fb5?w=800&q=80" },
-    { id: 22, name: "AI Chatbot Builder SaaS", category: "SaaS", desc: "No-code bot builder for websites", image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" },
-    { id: 23, name: "Employee HR SaaS", category: "SaaS", desc: "Leave, payroll, attendance tracking", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" },
-    { id: 24, name: "Reputation Management SaaS", category: "SaaS", desc: "Monitor all reviews in one dashboard", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" },
 
-    // SEO
-    { id: 25, name: "GMB Setup & Optimization", category: "SEO", desc: "Complete GMB audit and optimization", image: "https://images.unsplash.com/photo-1527334919515-b8dee906a34b?w=800&q=80" },
-    { id: 26, name: "Local SEO Monthly", category: "SEO", desc: "Rank in top 3 on Google Maps", image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80" },
-    { id: 27, name: "Multi-location Maps SEO", category: "SEO", desc: "For chains and franchise businesses", image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80" },
-    { id: 28, name: "Competitor SEO Audit", category: "SEO", desc: "Detailed competitor gap analysis", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" },
-    { id: 29, name: "E-commerce SEO Package", category: "SEO", desc: "Product & category page ranking", image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80" },
-    { id: 30, name: "YouTube SEO + Video", category: "SEO", desc: "Channel growth and video ranking", image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&q=80" },
-    { id: 31, name: "Review Generation Campaign", category: "SEO", desc: "Get 50-100 real Google reviews", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" },
-    { id: 32, name: "SEO + AI Content Strategy", category: "SEO", desc: "Monthly blogs + ranking strategy", image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80" },
   ];
 
   const filtered = filter === 'All' ? projects : projects.filter(p => p.category === filter);
 
   return (
-    <section id="projects" className="py-24 bg-white relative">
+    <section id="projects" className="py-24 bg-vedam-cream relative border-t border-gray-100">
       <div className="container mx-auto px-6 lg:px-16" ref={ref}>
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 lg:mb-16 gap-6">
           <motion.h2 
             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-bold text-black"
@@ -67,11 +44,11 @@ const Portfolio = ({ onNavigateToDynamic }) => {
             initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             className="flex flex-wrap gap-3"
           >
-            {['All', 'AI', 'Web & App', 'SaaS', 'SEO'].map(tab => (
+            {['All', 'AI', 'Web & App'].map(tab => (
               <button 
                 key={tab}
                 onClick={() => setFilter(tab)}
-                className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${filter === tab ? 'bg-vedam-blue text-white shadow-lg' : 'bg-gray-50 text-gray-600 hover:bg-gray-200'}`}
+                className={`px-3 py-1 text-sm font-serif italic transition-all border-b-2 ${filter === tab ? 'border-vedam-gold text-vedam-charcoal' : 'border-transparent text-gray-500 hover:text-vedam-charcoal'}`}
               >
                 {tab}
               </button>
@@ -90,13 +67,21 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                 transition={{ duration: 0.3 }}
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group relative rounded-2xl overflow-hidden bg-gray-50 cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-vedam-blue/10 border border-gray-100 transition-all flex flex-col h-full"
+                className="group relative rounded-2xl overflow-hidden bg-white cursor-pointer border border-transparent hover:border-vedam-gold/50 transition-all flex flex-col h-full shadow-sm hover:shadow-lg duration-500"
               >
                 <div className="h-56 overflow-hidden relative shrink-0">
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors z-10" />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500 z-10 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 p-4">
+                    <div className="flex flex-wrap justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                      {project.tech?.map((t, i) => (
+                        <span key={i} className="px-3 py-1 bg-white/20 border border-white/40 text-white text-xs font-bold rounded-full shadow-lg">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   <img src={project.image} alt={project.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3 py-1 text-xs font-bold bg-white/90 backdrop-blur-sm text-vedam-blue rounded-full shadow-sm">
+                    <span className="px-3 py-1 text-xs font-bold bg-white text-black shadow-lg uppercase tracking-wider rounded-full">
                       {project.category}
                     </span>
                   </div>
@@ -106,10 +91,10 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                     <h3 className="text-xl font-bold text-black mb-2 leading-snug">{project.name}</h3>
                     <p className="text-sm text-gray-600 mb-6">{project.desc}</p>
                   </div>
-                  <div className="flex justify-between items-center mt-auto border-t border-gray-200 pt-4 group-hover:border-vedam-blue/30 transition-colors">
-                    <span className="text-sm font-bold text-vedam-blue">View Details</span>
-                    <div className="w-8 h-8 rounded-full bg-vedam-blue/10 flex items-center justify-center text-vedam-blue group-hover:bg-vedam-blue group-hover:text-white transition-colors">
-                      <ArrowUpRight className="w-4 h-4" />
+                  <div className="flex justify-between items-center mt-auto pt-4 group-hover:text-vedam-gold text-gray-400 transition-colors duration-500 border-t border-gray-100">
+                    <span className="text-xs font-serif italic tracking-wider capitalize">View Details</span>
+                    <div className="w-8 h-8 flex items-center justify-center transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                      <ArrowUpRight className="w-5 h-5" />
                     </div>
                   </div>
                 </div>
@@ -132,19 +117,19 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                 initial={{ opacity: 0, y: 50, scale: 0.95 }} 
                 animate={{ opacity: 1, y: 0, scale: 1 }} 
                 exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                className="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl overflow-hidden flex flex-col"
+                className="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl overflow-hidden flex flex-col border border-gray-200"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="relative h-64 md:h-96 w-full shrink-0">
-                  <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-full object-cover" />
+                  <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-full object-cover grayscale opacity-80" />
                   <button 
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-6 right-6 w-10 h-10 bg-white/20 hover:bg-white backdrop-blur-md rounded-full flex items-center justify-center text-white hover:text-black transition-all shadow-lg"
+                    className="absolute top-6 right-6 w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-black hover:bg-gray-100 transition-all shadow-sm"
                   >
                     <X className="w-5 h-5" />
                   </button>
                   <div className="absolute bottom-6 left-6 flex gap-3">
-                    <span className="px-4 py-1.5 text-sm font-bold bg-vedam-blue text-white rounded-full shadow-lg tracking-wide uppercase">
+                    <span className="px-3 py-1 text-xs font-semibold bg-white text-black border border-gray-200 tracking-wider uppercase">
                       {selectedProject.category}
                     </span>
                   </div>
@@ -158,21 +143,32 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                     {selectedProject.desc}
                   </p>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                    <div className="md:col-span-2">
                       <h4 className="text-lg font-bold text-black mb-4">Project Overview</h4>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed mb-6">
                         This custom solution was engineered to streamline operations and drive significant growth. Leveraging modern frameworks and advanced technology, we built a highly scalable architecture tailored specifically to the client's unique business requirements.
                       </p>
-                    </div>
-                    <div>
+                      
                       <h4 className="text-lg font-bold text-black mb-4">Key Features</h4>
-                      <ul className="space-y-3 text-gray-600 font-medium">
-                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-vedam-blue rounded-full shadow-sm shadow-vedam-blue/50"></div> Custom UI/UX Design</li>
-                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-vedam-blue rounded-full shadow-sm shadow-vedam-blue/50"></div> Scalable Architecture</li>
-                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-vedam-blue rounded-full shadow-sm shadow-vedam-blue/50"></div> Seamless API Integrations</li>
-                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-vedam-blue rounded-full shadow-sm shadow-vedam-blue/50"></div> Advanced Analytics & Tracking</li>
+                      <ul className="space-y-3 text-gray-600 font-medium grid grid-cols-1 sm:grid-cols-2">
+                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-black rounded-full shadow-sm"></div> Custom UI/UX Design</li>
+                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-black rounded-full shadow-sm"></div> Scalable Architecture</li>
+                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-black rounded-full shadow-sm"></div> Seamless API Integrations</li>
+                        <li className="flex items-center gap-3"><div className="w-2 h-2 bg-black rounded-full shadow-sm"></div> Advanced Analytics</li>
                       </ul>
+                    </div>
+                    
+                    <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col justify-center">
+                      <h4 className="text-lg font-bold text-black mb-6 border-b border-gray-200 pb-2">Verified Results</h4>
+                      <div className="space-y-6 flex-grow">
+                        {selectedProject.results?.map((res, i) => (
+                          <div key={i} className="flex flex-col">
+                            <span className="text-3xl font-black text-green-600 mb-1">{res.split(' ')[0]}</span>
+                            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{res.substring(res.indexOf(' ') + 1)}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   
@@ -182,8 +178,8 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                         <button 
                           onClick={() => {
                             const routes = {
-                              1: 'ai-agent', 2: 'ai-chatbot', 3: 'ai-social', 4: 'ai-invoice',
-                              5: 'ai-whatsapp', 6: 'ai-hr', 7: 'ai-review', 8: 'ai-report'
+                              1: 'ai-calling', 2: 'ai-agent', 3: 'ai-chatbot', 4: 'ai-social',
+                              5: 'ai-whatsapp', 6: 'ai-content'
                             };
                             const route = routes[selectedProject.id];
                             if (route) {
@@ -194,25 +190,6 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                           className="px-8 py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center gap-2"
                         >
                           Visit Live Project <ArrowUpRight className="w-5 h-5" />
-                        </button>
-                        <button 
-                          onClick={() => {
-                            const routes = {
-                              1: 'ai-agent', 2: 'ai-chatbot', 3: 'ai-social', 4: 'ai-invoice',
-                              5: 'ai-whatsapp', 6: 'ai-hr', 7: 'ai-review', 8: 'ai-report'
-                            };
-                            const route = routes[selectedProject.id];
-                            if (route) {
-                              setSelectedProject(null);
-                              onNavigateToDynamic(route);
-                              setTimeout(() => {
-                                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
-                              }, 100);
-                            }
-                          }}
-                          className="px-8 py-4 bg-white border-2 border-gray-100 text-black font-bold rounded-xl hover:bg-gray-50 transition-colors shadow-sm flex items-center justify-center gap-2"
-                        >
-                          How to work
                         </button>
                       </>
                     ) : selectedProject.category === 'Web & App' ? (
@@ -221,45 +198,7 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                           onClick={() => {
                             const routes = {
                               9: 'web-restaurant', 10: 'web-doctor', 11: 'web-real-estate', 12: 'web-school',
-                              13: 'web-ecommerce', 14: 'web-lawyer', 15: 'web-event', 16: 'web-ngo'
-                            };
-                            const route = routes[selectedProject.id];
-                            if (route) {
-                              setSelectedProject(null);
-                              onNavigateToDynamic(route);
-                            }
-                          }}
-                          className="px-8 py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center gap-2"
-                        >
-                          Visit Live Project <ArrowUpRight className="w-5 h-5" />
-                        </button>
-                      </>
-                    ) : selectedProject.category === 'SaaS' ? (
-                      <>
-                        <button 
-                          onClick={() => {
-                            const routes = {
-                              17: 'saas-dashboard', 18: 'saas-content', 19: 'saas-whatsapp', 20: 'saas-invoice',
-                              21: 'saas-booking', 22: 'saas-chatbot', 23: 'saas-hr', 24: 'saas-reputation'
-                            };
-                            const route = routes[selectedProject.id];
-                            if (route) {
-                              setSelectedProject(null);
-                              onNavigateToDynamic(route);
-                            }
-                          }}
-                          className="px-8 py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center gap-2"
-                        >
-                          Visit Live Project <ArrowUpRight className="w-5 h-5" />
-                        </button>
-                      </>
-                    ) : selectedProject.category === 'SEO' ? (
-                      <>
-                        <button 
-                          onClick={() => {
-                            const routes = {
-                              25: 'seo-gmb', 26: 'seo-local', 27: 'seo-multi', 28: 'seo-audit',
-                              29: 'seo-ecommerce', 30: 'seo-youtube', 31: 'seo-review', 32: 'seo-ai'
+                              13: 'web-ecommerce'
                             };
                             const route = routes[selectedProject.id];
                             if (route) {
@@ -273,12 +212,12 @@ const Portfolio = ({ onNavigateToDynamic }) => {
                         </button>
                       </>
                     ) : (
-                      <button className="px-8 py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center gap-2">
-                        Visit Live Project <ArrowUpRight className="w-5 h-5" />
+                      <button className="px-6 py-3 bg-black text-white text-sm font-semibold uppercase tracking-wider rounded-2xl hover:bg-gray-900 transition-colors shadow-sm flex items-center justify-center gap-2">
+                        Visit Live Project <ArrowUpRight className="w-4 h-4" />
                       </button>
                     )}
-                    <a href="#contact" onClick={() => setSelectedProject(null)} className="px-8 py-4 bg-vedam-blue/10 text-vedam-blue font-bold rounded-xl hover:bg-vedam-blue hover:text-white transition-colors text-center flex items-center justify-center">
-                      Request Similar Project
+                    <a href="#contact" onClick={() => setSelectedProject(null)} className="px-6 py-3 bg-transparent border border-gray-200 text-gray-500 text-sm font-semibold uppercase tracking-wider rounded-2xl hover:border-black hover:text-black transition-colors text-center flex items-center justify-center">
+                      Build Your Own
                     </a>
                   </div>
                 </div>

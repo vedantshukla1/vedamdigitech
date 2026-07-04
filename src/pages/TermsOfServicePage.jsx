@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom';
 
 const TermsOfServicePage = () => {
   const navigate = useNavigate();
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+    <div className="min-h-screen bg-vedam-cream text-vedam-charcoal font-sans">
       <header className="bg-white px-6 py-4 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50 shadow-sm">
         <div className="flex items-center gap-3">
-          <h2 className="text-xl md:text-2xl font-bold font-heading text-black">Vedam Digitech</h2>
+          <h2 className="text-xl md:text-2xl font-bold font-heading text-vedam-charcoal">Vedam Digitech</h2>
         </div>
         <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl text-sm font-bold flex items-center gap-2 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to Home
@@ -18,7 +18,7 @@ const TermsOfServicePage = () => {
       </header>
       <main className="max-w-4xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
-        <div className="prose prose-blue max-w-none space-y-6">
+        <div className="prose prose-yellow max-w-none space-y-6">
           <p>Last updated: June 2026</p>
           
           <h3 className="text-2xl font-bold mt-8 mb-4">1. Acceptance of Terms</h3>
@@ -39,13 +39,13 @@ const TermsOfServicePage = () => {
             <li>You have successfully removed your app activities. To request complete deletion of all data we hold regarding your Facebook account on our servers, click the "Send Request" button on the removal confirmation, or email us directly at <strong>vedamdigitechoffical@gmail.com</strong> with your Facebook user ID.</li>
           </ol>
           
-          <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl mt-8">
-            <h4 className="font-bold text-blue-900 mb-2">Developer Data Deletion Callback URL</h4>
-            <p className="text-sm text-blue-800 mb-2">For Facebook Developers and automated compliance systems, our verified Data Deletion Callback URL is:</p>
-            <code className="block bg-white border border-blue-100 p-3 rounded text-sm text-gray-800 break-all shadow-sm">
+          <div className="bg-vedam-cream border border-yellow-200 p-6 rounded-xl mt-8">
+            <h4 className="font-bold text-yellow-900 mb-2">Developer Data Deletion Callback URL</h4>
+            <p className="text-sm text-vedam-charcoal mb-2">For Facebook Developers and automated compliance systems, our verified Data Deletion Callback URL is:</p>
+            <code className="block bg-white border border-vedam-gold/20 p-3 rounded text-sm text-gray-800 break-all shadow-sm">
               https://vedamdigitech.onrender.com/api/webhooks/facebook/data-deletion
             </code>
-            <p className="text-sm text-blue-800 mt-3">We process signed requests strictly according to Facebook's automated data deletion requirements, responding with a secure status URL and alphanumeric confirmation code.</p>
+            <p className="text-sm text-vedam-charcoal mt-3">We process signed requests strictly according to Facebook's automated data deletion requirements, responding with a secure status URL and alphanumeric confirmation code.</p>
           </div>
         </div>
       </main>
